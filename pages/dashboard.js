@@ -4,9 +4,9 @@ import { Chip } from 'react-native-elements';
 import { ScrollView } from 'react-native-gesture-handler';
 import { Title } from 'react-native-paper';
 import { SafeAreaView } from 'react-native-safe-area-context';
+import VisitWeb from '../atoms/visitweb';
 import DashboardRows from '../components/dashboard_components/dash_row';
 import DashboardSlider from '../components/dashboard_components/dash_slider';
-import DashboardSwitchingPosts from '../components/dashboard_components/dash_switch_post';
 import DashboardButtonTiles from '../components/dashboard_components/dash_tiles';
 import { DARK_GREEN, LIGHT_SILVER, PRIMARY, WHITE } from '../shared/colors';
 
@@ -18,20 +18,19 @@ export default function Dashboard() {
                 <Text  style={styles.slider_header}>FEATURES</Text>
             </View>
             <DashboardSlider/>
-            <View style={styles.title_container}>
-                <Text  style={styles.posts_header}>LATEST POST</Text>
-            </View>
-            <DashboardSwitchingPosts/>
+            
             <View style={styles.title_container}>
                 <Text  style={styles.tile_header}>DISCOVER</Text>
             </View>
             <DashboardButtonTiles/>
             <View style={styles.title_container}>
-                <Text  style={styles.tile_header}>MY ACCOUNT</Text>
+                <Text  style={styles.tile_header}>ACCOUNTS</Text>
             </View>
             <DashboardRows/>
-            <View style={{height:30}}></View>
+            <View style={{height:40}}></View>
+            <VisitWeb url="https://www.google.com"/>
         </ScrollView>
+        
     </SafeAreaView>
   );
 }

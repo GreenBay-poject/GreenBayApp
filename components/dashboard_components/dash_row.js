@@ -7,9 +7,16 @@ import { PRIMARY } from '../../shared/colors';
 
 export default function DashboardRows() {
   return (
+    <>
     <View style={styles.container}>
       <StretchCard imagelink="user" title="My Account" paragraph="Handle all things related to you user account" />
     </View>
+    <View style={{height:10}}></View>
+    <View style={styles.container}>
+      <StretchCard imagelink="info" title="About Us" paragraph="If you want to about us, we are ready to share it" />
+    </View>
+    </>
+    
   );
 }
 
