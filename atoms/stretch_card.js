@@ -2,11 +2,11 @@ import React from 'react';
 import { ImageBackground, StyleSheet, Text, TouchableHighlight, View } from 'react-native';
 import { BLACK, DARK_BLUE, DARK_GREEN, DARK_RED, LIGHT_SILVER, WHITE } from '../shared/colors';
 import { AntDesign } from '@expo/vector-icons';
-export default function StretchCard({imagelink,title,paragraph}) {
+export default function StretchCard({imagelink,title,page_to_go,paragraph,navigation}) {
   
 
   return (
-      <TouchableHighlight style={styles.button} onPress={()=>{}}>
+      <TouchableHighlight style={styles.button} onPress={()=>navigation.navigate(page_to_go)}>
           
           <View style={styles.card}>
           <View style={{width:5,backgroundColor:DARK_RED}}></View>

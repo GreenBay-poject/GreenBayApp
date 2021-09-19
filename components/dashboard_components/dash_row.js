@@ -5,11 +5,11 @@ import { SafeAreaView } from 'react-native-safe-area-context';
 import StretchCard from '../../atoms/stretch_card';
 import { PRIMARY } from '../../shared/colors';
 
-export default function DashboardRows() {
+export default function DashboardRows({navigation}) {
   return (
     <>
     <View style={styles.container}>
-      <StretchCard imagelink="user" title="My Account" paragraph="Handle all things related to you user account" />
+      <StretchCard navigation={navigation} imagelink="user" title="My Account" page_to_go="MyAccount" paragraph="Handle all things related to you user account" />
     </View>
     <View style={{height:10}}></View>
     <View style={styles.container}>

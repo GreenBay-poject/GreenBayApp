@@ -5,6 +5,7 @@ import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 import Dashboard from './pages/dashboard';
 import { DARK_GREEN, LIGHT_SILVER, PRIMARY, SECONDARY, WHITE } from './shared/colors';
+import MyAccount from './pages/myaccount';
 
 const Stack = createStackNavigator();
 
@@ -13,12 +14,26 @@ export default function App() {
     <NavigationContainer>
       <Stack.Navigator initialRouteName="Dashboard">
         <Stack.Screen name="Dashboard" component={Dashboard} options={styles.dashboardheader}/>
+        <Stack.Screen name="MyAccount" component={MyAccount} options={styles.myaccountheader}/>
       </Stack.Navigator>
     </NavigationContainer>
   );
 };
 
 const styles = {
+  myaccountheader:{
+    title: 'MY ACCOUNT',
+    headerStyle: {
+      backgroundColor: LIGHT_SILVER,
+      
+    },
+    headerTintColor: SECONDARY,
+    headerTitleStyle: {
+      fontWeight: 'bold',
+      fontSize: 24,
+      
+    },
+  },
   dashboardheader: {
     title: 'DASHBOARD',
     headerStyle: {

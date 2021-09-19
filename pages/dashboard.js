@@ -10,7 +10,7 @@ import DashboardSlider from '../components/dashboard_components/dash_slider';
 import DashboardButtonTiles from '../components/dashboard_components/dash_tiles';
 import { DARK_GREEN, LIGHT_SILVER, PRIMARY, WHITE } from '../shared/colors';
 
-export default function Dashboard() {
+export default function Dashboard({navigation}) {
   return (
     <SafeAreaView style={styles.container}>
         <ScrollView>
@@ -26,7 +26,7 @@ export default function Dashboard() {
             <View style={styles.title_container}>
                 <Text  style={styles.tile_header}>ACCOUNTS</Text>
             </View>
-            <DashboardRows/>
+            <DashboardRows navigation={navigation}/>
             <View style={{height:40}}></View>
             <VisitWeb url="https://www.google.com"/>
         </ScrollView>
