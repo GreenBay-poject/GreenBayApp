@@ -1,36 +1,36 @@
-import axios from "axios";
+import axios from "axios"
+import { GET_USER_INFO, SIGN_IN, SIGN_UP } from "./endpoints"
+
+export {
+    requestSignIn,
+    requestUserData,
+    requestSignUp
+}
 
 
+function requestSignIn(email,password){
+    const data={'email':email,'password':password}
+    return axios.post(SIGN_IN,data)
+}
 
-export default async function Process(url,type,token,queryparam,body){
-
-    const config = {
-        headers: { Authorization: `Bearer ${token}` }
-    };
-    const Parameters = {data:body,query:queryparam}
-
-    switch (type) {
-        case 'POST':
-            return axios.post( 
-                url,
-                Parameters,
-                config
-            );
-        case 'GET':
-            return axios.get( 
-                url,
-                Parameters,
-                config
-            );
-        
-        default:
-            break;
+function requestSignUp(Name_SUP,Email_SUP,Age_SUP,Address_SUP,Gender_SUP,Postal_SUP){
+    const data={
+        "name":Name_SUP,
+        "email":Email_SUP,
+        "age":Age_SUP,
+        "address":Address_SUP,
+        "gender":Gender_SUP,
+        "postalcode":Postal_SUP
     }
+    return axios.post(SIGN_UP,data)
+}
 
-    axios.post( 
-      url,
-      Parameters,
-      config
-    ).then(console.log).catch(console.log);
-
-};
+function requestUserData(TokenFetched,EmailFetched){
+    const data={'email':EmailFetched}
+    let config = {
+        headers: {
+          'Authorization': 'Bearer ' + TokenFetched
+        }
+      }
+    return axios.post(GET_USER_INFO,data,config)
+}

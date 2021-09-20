@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 import { Chip } from 'react-native-elements';
 import { ScrollView } from 'react-native-gesture-handler';
@@ -8,12 +8,30 @@ import VisitWeb from '../atoms/visitweb';
 import DashboardRows from '../components/dashboard_components/dash_row';
 import DashboardSlider from '../components/dashboard_components/dash_slider';
 import DashboardButtonTiles from '../components/dashboard_components/dash_tiles';
-import { DARK_GREEN, LIGHT_SILVER, PRIMARY, WHITE } from '../shared/colors';
+import { DARK_BLUE, DARK_GREEN, LIGHT_SILVER, PRIMARY, WHITE } from '../shared/colors';
+import { get_email_auth } from '../storage/storemanager';
 
 export default function Dashboard({navigation}) {
+
+  const [email,setemail]=useState('');
+  const [auth,setauth]=useState('');
+
+  get_email_auth().then((data)=>{
+    setemail(data[0]);
+    setauth(data[1]);
+  })
+
   return (
     <SafeAreaView style={styles.container}>
         <ScrollView>
+          {
+            email.length>2?
+              <>
+                <Text style={styles.chip} >{'Logged In as :'+email}</Text>
+                <Text style={styles.chip} >{'Authrized User :'+auth}</Text>
+              </>
+            :<></>
+          }
             <View style={styles.title_container}>
                 <Text  style={styles.slider_header}>FEATURES</Text>
             </View>
@@ -36,6 +54,10 @@ export default function Dashboard({navigation}) {
 }
 
 const styles = StyleSheet.create({
+  chip:{
+    alignSelf:'center',
+    margin:5,
+  },
   container: {
     flex: 1,
     backgroundColor: PRIMARY,
