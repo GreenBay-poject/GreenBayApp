@@ -1,10 +1,11 @@
 import axios from "axios"
-import { GET_USER_INFO, SIGN_IN, SIGN_UP } from "./endpoints"
+import { GET_USER_INFO, LOGOUT, SIGN_IN, SIGN_UP } from "./endpoints"
 
 export {
     requestSignIn,
     requestUserData,
-    requestSignUp
+    requestSignUp,
+    requestLogOut
 }
 
 
@@ -33,4 +34,14 @@ function requestUserData(TokenFetched,EmailFetched){
         }
       }
     return axios.post(GET_USER_INFO,data,config)
+}
+
+function requestLogOut(TokenFetched,EmailFetched){
+    const data={'email':EmailFetched}
+    let config = {
+        headers: {
+          'Authorization': 'Bearer ' + TokenFetched
+        }
+      }
+    return axios.post(LOGOUT,data,config)
 }

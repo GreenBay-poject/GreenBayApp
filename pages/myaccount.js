@@ -22,7 +22,7 @@ export default function MyAccount({navigation}) {
   return (
     <SafeAreaView>
       {
-        email.length>2?
+        email!=null && email.length>2?
         <Details navigation={navigation}/>
         :
         <SignInForm navigation={navigation}/>

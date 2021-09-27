@@ -13,25 +13,11 @@ import { get_email_auth } from '../storage/storemanager';
 
 export default function Dashboard({navigation}) {
 
-  const [email,setemail]=useState('');
-  const [auth,setauth]=useState('');
-
-  get_email_auth().then((data)=>{
-    setemail(data[0]);
-    setauth(data[1]);
-  })
+ 
 
   return (
     <SafeAreaView style={styles.container}>
         <ScrollView>
-          {
-            email.length>2?
-              <>
-                <Text style={styles.chip} >{'Logged In as :'+email}</Text>
-                <Text style={styles.chip} >{'Authrized User :'+auth}</Text>
-              </>
-            :<></>
-          }
             <View style={styles.title_container}>
                 <Text  style={styles.slider_header}>FEATURES</Text>
             </View>
