@@ -26,7 +26,7 @@ export default function Dashboard({navigation}) {
             <View style={styles.title_container}>
                 <Text  style={styles.tile_header}>DISCOVER</Text>
             </View>
-            <DashboardButtonTiles/>
+            <DashboardButtonTiles navigation={navigation}/>
             <View style={styles.title_container}>
                 <Text  style={styles.tile_header}>ACCOUNTS</Text>
             </View>

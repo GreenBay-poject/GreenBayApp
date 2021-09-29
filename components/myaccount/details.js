@@ -1,7 +1,6 @@
 import { StackActions } from '@react-navigation/routers';
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { ActivityIndicator, Button, ScrollView, StyleSheet, Text, View } from 'react-native';
-import { TextInput } from 'react-native-gesture-handler';
 import ShowAlert from '../../Alert/alert';
 import { requestLogOut, requestUserData } from '../../server/requestgenerator';
 import { DARK_GREEN, DARK_RED, LIGHT_SILVER } from '../../shared/colors';
@@ -22,7 +21,7 @@ export default function Details({navigation}) {
   
   const [logoutprocessing,setlogoutprocessing]=useState(false)
 
-  if(!logoutprocessing){
+  useEffect(()=>{
     get_email_token_auth().then((data)=>{
         requestUserData(data[1],data[0]).then((res)=>{
             settoken(data[1]),
@@ -37,7 +36,7 @@ export default function Details({navigation}) {
             setloading(false)
         })
       })
-  }
+  },[]);
   
 
   const logout=()=>{

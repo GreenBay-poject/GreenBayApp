@@ -16,7 +16,7 @@ export default function SignInForm({navigation}){
 
   const [Email_SUP, onChangeEmail_SUP] = React.useState('');
   const [Name_SUP, onChangeName_SUP] = React.useState('');
-  const [Age_SUP, onChangeAge_SUP] = React.useState(-1);
+  const [Age_SUP, onChangeAge_SUP] = React.useState('');
   const [Address_SUP, onChangeAddress_SUP] = React.useState('');
   const [Gender_SUP, onChangeGender_SUP] = React.useState('');
   const [Postal_SUP, onChangePostal_SUP] = React.useState('');
@@ -60,7 +60,7 @@ export default function SignInForm({navigation}){
       console.debug(res.data.content);
       setanim(false);
       onChangeForm(true);
-      ShowAlert('Error !',res.data.content+"\nYour Password sent to email. Please check email and sign in again.");
+      ShowAlert('Success',res.data.content+"\nYour Password sent to email. Please check email and sign in again.");
     })
     .catch((err)=>{
       console.debug(err.response.data.Message);
