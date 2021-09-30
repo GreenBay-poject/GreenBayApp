@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 import { Chip } from 'react-native-elements';
 import { ScrollView } from 'react-native-gesture-handler';
@@ -8,9 +8,13 @@ import VisitWeb from '../atoms/visitweb';
 import DashboardRows from '../components/dashboard_components/dash_row';
 import DashboardSlider from '../components/dashboard_components/dash_slider';
 import DashboardButtonTiles from '../components/dashboard_components/dash_tiles';
-import { DARK_GREEN, LIGHT_SILVER, PRIMARY, WHITE } from '../shared/colors';
+import { DARK_BLUE, DARK_GREEN, LIGHT_SILVER, PRIMARY, WHITE } from '../shared/colors';
+import { get_email_auth } from '../storage/storemanager';
 
-export default function Dashboard() {
+export default function Dashboard({navigation}) {
+
+ 
+
   return (
     <SafeAreaView style={styles.container}>
         <ScrollView>
@@ -22,11 +26,11 @@ export default function Dashboard() {
             <View style={styles.title_container}>
                 <Text  style={styles.tile_header}>DISCOVER</Text>
             </View>
-            <DashboardButtonTiles/>
+            <DashboardButtonTiles navigation={navigation}/>
             <View style={styles.title_container}>
                 <Text  style={styles.tile_header}>ACCOUNTS</Text>
             </View>
-            <DashboardRows/>
+            <DashboardRows navigation={navigation}/>
             <View style={{height:40}}></View>
             <VisitWeb url="https://www.google.com"/>
         </ScrollView>
@@ -36,6 +40,10 @@ export default function Dashboard() {
 }
 
 const styles = StyleSheet.create({
+  chip:{
+    alignSelf:'center',
+    margin:5,
+  },
   container: {
     flex: 1,
     backgroundColor: PRIMARY,

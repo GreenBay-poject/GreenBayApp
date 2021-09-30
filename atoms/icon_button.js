@@ -4,9 +4,9 @@ import { StyleSheet, Text, TouchableHighlight, View } from 'react-native';
 import { AntDesign } from '@expo/vector-icons';
 import { DARK_GREEN, LIGHT_SILVER } from '../shared/colors';
 
-export default function CustomIconButton({ant_design_icon_name,text}) {
+export default function CustomIconButton({ant_design_icon_name,text,navigation,page_to_go}) {
   return (
-      <TouchableHighlight  onPress={()=>{}}>
+      <TouchableHighlight  onPress={()=>{navigation.navigate(page_to_go)}} >
         <View  style={styles.button}>
         <AntDesign name={ant_design_icon_name} size={70} color={DARK_GREEN} />
           <Text  style={styles.text}>{text}</Text>
