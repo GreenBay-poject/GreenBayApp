@@ -27,7 +27,7 @@ export default function DashboardButtonTiles({navigation}) {
         </View>
         <View style={{width:30}}></View>
         <View>
-          <CustomIconButton page_to_go="PostPage" navigation={navigation} ant_design_icon_name="book" text="Note"/>
+          <CustomIconButton page_to_go="NotePage" navigation={navigation} ant_design_icon_name="book" text="Note"/>
         </View>
         <View style={{width:30,backgroundColor:DARK_GREEN}}></View>
       </View>

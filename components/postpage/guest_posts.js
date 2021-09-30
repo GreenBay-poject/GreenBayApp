@@ -1,45 +1,105 @@
 import React, { useEffect, useState } from 'react';
-import { SafeAreaView, StyleSheet, Text} from 'react-native';
+import { ActivityIndicator, Button, Dimensions, PixelRatio } from 'react-native';
+import { SafeAreaView, ScrollView, StyleSheet, Text, View} from 'react-native';
 import PostCard from '../../atoms/post';
 import { requestAllPosts } from '../../server/postrequestgenerator';
 
 export default function GuestsPosts({user}) {
 
     const [post,setposts]=useState([])
+    const [page,setpage]=useState(0)
+    const [pages,setpages]=useState(0)
 
     useEffect(()=>{
         requestAllPosts().then((res)=>{
             const allposts=ProcessPosts(res.data.ALL_POSTS)
-            const chunks=splitArrayIntoChunksOfLen(allposts,5);
+            const chunks=splitArrayIntoChunksOfLen(allposts,1);
             console.debug(chunks)
             console.debug(chunks.length)
-            setposts(chunks)
+            setposts(chunks.reverse())
+            setpages(chunks.length)
         })
 
 
     },[]);
-  
+
+    console.debug("::::-->"+pages)
+    console.debug("::::-->"+page)
+    
+    var cards=[]
+    if(post.length!=0){
+        
+        var i=0
+        cards=[]
+        post[page].forEach((post_data)=>{
+            cards.push(<PostCard
+                key={i}
+                Title={post_data['Title']}
+                Image={post_data['Image']}
+                Description={post_data['Description']}
+                email={post_data['email']}
+                post_id={post_data['post_id']}
+                DatePosted={post_data['DatePosted']}
+            />);
+            i+=1
+        },
+        );
+    }
+    
     return (
-    <SafeAreaView>
+        <>
         {
             post.length==0?
-            <Text>LOADING</Text>:
-            <>
-             <PostCard
-               Title={post[0][0]['Title']}
-               Image={post[0][0]['Image']}
-               Description={post[0][0]['Description']}
-               email={post[0][0]['email']}
-               post_id={post[0][0]['post_id']}
-               DatePosted={post[0][0]['DatePosted']}
+            <ActivityIndicator
+            animating={post.length==0}
+            style={[{height: 80}]}
+            color="#C00"
+            size="large"
+            hidesWhenStopped={true}
             />
-            </>
+            :
+            <View>
+            <View style={{ height:'10%' , flexDirection:"row",alignSelf:"center" }}>
+                <View style={{ alignSelf:"center",marginHorizontal:5 }}>
+                    <Button 
+                        disabled={page<=0}
+                        title="Previous"
+                        onPress={()=>{
+                            setpage(page-1),
+                            console.debug(page)
+                        }}
+                    />
+                </View>
+                <View style={{ alignSelf:"center",marginHorizontal:5 }}>
+                    <Button
+                        disabled={page+1>=pages}
+                        title="Next"
+                        onPress={()=>{
+                            setpage(page+1)
+                            console.debug(page)
+                        }}
+
+                    />
+                </View>
+            </View>
+            <View style={styles.scroll}>
+                    {       
+                        cards
+                    }
+            </View>
+            
+
+        </View>
         }
-    </SafeAreaView>
+        </>
   );
 }
 
 const styles = StyleSheet.create({
+
+    scroll:{
+        marginBottom:100
+    }
   
 });
 
@@ -61,4 +121,4 @@ function splitArrayIntoChunksOfLen(arr, len) {
       chunks.push(arr.slice(i, i += len));
     }
     return chunks;
-  }
+}

@@ -7,3 +7,7 @@ export const LOGOUT=HOST+"/auth/logout"
 
 
 export const GET_ALL_POSTS=HOST+"/feed/view_posts"
+
+
+
+export const GET_PUBLIC_NOTES=HOST+"/note/get_public_note"
