@@ -19,7 +19,8 @@ const styles = StyleSheet.create({
   button: {
     elevation:2,
     borderColor:DARK_GREEN,
-    borderWidth:0.28,
+    borderWidth:1,
+    marginHorizontal:5,
     padding:10,
     width:120,
     flex: 1,
@@ -28,7 +29,7 @@ const styles = StyleSheet.create({
   },
   text: {
     color:DARK_GREEN,
-    fontSize: 18,
+    fontSize: 17,
     fontWeight:'bold'
   },
 });
