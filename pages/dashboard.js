@@ -48,7 +48,7 @@ export default function Dashboard({ navigation }) {
         </View>
         <DashboardRows navigation={navigation} />
         <View style={{ height: 40 }}></View>
-        <VisitWeb url="https://www.google.com" />
+        {/* <VisitWeb url="https://www.google.com" /> */}
       </ScrollView>
       <DashBoardBottomSheet isVisible={isVisible} setIsVisible={setIsVisible} />
 
@@ -61,7 +61,10 @@ const styles = StyleSheet.create({
   button: {
     alignItems: 'center',
     backgroundColor: DARK_GREEN,
-    padding: 10
+    padding: 10,
+    width: '95%',
+    alignSelf: 'center',
+    borderRadius: 10
   },
   chip: {
     alignSelf: 'center',

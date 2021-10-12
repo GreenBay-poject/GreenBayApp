@@ -7,11 +7,17 @@ import { DARK_GREEN, DARK_RED, LIGHT_SILVER, PRIMARY } from '../../shared/colors
 export default class Ticker extends PureComponent {
     render() {
         return (
-            <>
-                <Divider style={styles.div_top} />
+            <View style={{ marginTop: 12, borderColor: DARK_GREEN, borderWidth: 1, borderRadius: 10, width: '95%', alignSelf: 'center' }}>
+                {/* <View
+                    style={{
+                        borderBottomColor: 'black',
+                        borderBottomWidth: 1,
+                        marginTop: 12,
+                    }}
+                /> */}
                 <View style={styles.container}>
                     <TextTicker
-                        style={{ fontSize: 18 }}
+                        style={{ fontSize: 15 }}
                         scrollSpeed={40}
                         loop={true}
                         scroll={true}
@@ -20,23 +26,27 @@ export default class Ticker extends PureComponent {
                     >
                         | Notes | You may have found a special places for research,In here you can add notes to your own map.These notes are only visible for you                </TextTicker>
                 </View>
-                <Divider style={styles.div_bottom} />
-            </>
+                {/* <View
+                    style={{
+                        borderBottomColor: 'black',
+                        borderBottomWidth: 1,
+                        marginBottom: 12,
+                    }}
+                /> */}
+            </View>
         )
     }
 }
 
 const styles = StyleSheet.create({
-    div_top: {
-        marginTop: 12,
 
-    },
     div_bottom: {
         marginBottom: 2,
     },
     container: {
+        borderRadius: 10,
         flex: 1,
-        padding: 10,
+        padding: 5,
         backgroundColor: LIGHT_SILVER,
         justifyContent: 'center',
         alignItems: 'center',

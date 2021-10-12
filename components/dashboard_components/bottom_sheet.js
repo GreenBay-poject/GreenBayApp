@@ -23,9 +23,10 @@ export default function DashBoardBottomSheet({ isVisible, setIsVisible }) {
         <>
             <BottomSheet
                 isVisible={isVisible}
-                containerStyle={{ backgroundColor: 'rgba(0.5, 0.25, 0, 0.2)' }}
+                containerStyle={{ backgroundColor: 'rgba(255,0,0,0.0)' }}
+
             >
-                <View style={{ backgroundColor: 'white' }}>
+                <View style={{ backgroundColor: 'white', borderTopLeftRadius: 50, borderTopRightRadius: 50, borderWidth: 1, borderColor: DARK_GREEN }}>
                     <Image style={styles.gif} source={require('../../assets/treesave.png')} />
                 </View>
 
