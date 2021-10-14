@@ -1,37 +1,21 @@
 import React, { useEffect, useState } from 'react';
-import { ActivityIndicator, Button, Dimensions, PixelRatio, TouchableOpacity } from 'react-native';
+import { ActivityIndicator, Button, Dimensions, Image, PixelRatio, TouchableOpacity } from 'react-native';
 import { SafeAreaView, ScrollView, StyleSheet, Text, View } from 'react-native';
 import MapView, { Marker } from 'react-native-maps';
 import PostCard from '../../atoms/post';
 import { requestPublicNotes } from '../../server/noterequestgenerator';
-import { requestavailabledates } from '../../server/reportrequestgenerator';
+import { requestavailabledates, requestsateliteimage } from '../../server/reportrequestgenerator';
 import { BLACK, DARK_GREEN, LIGHT_SILVER, WHITE } from '../../shared/colors';
 
-export default function Date_Selector({ latitude, longitude, date, setdate, setstep }) {
+export default function Image_Viewer({ latitude, longitude, date, image, setimage, setstep }) {
 
-    const [dates, setdates] = useState([])
 
-    console.log(date)
 
     useEffect(() => {
-        setdate(null)
-        requestavailabledates(latitude, longitude).then((res) => {
-            console.log(res.data.All_Dates_Available)
-            var dates_fetched = []
-            var i = 0
-            res.data.All_Dates_Available.forEach(day => {
-                dates_fetched.push(
-                    <TouchableOpacity
-                        key={i}
-                        style={styles.datesshow}
-                        onPress={() => { setdate(day) }}
-                    >
-                        <Text style={{ color: BLACK, fontSize: 14 }}>{day}</Text>
-                    </TouchableOpacity>
-                )
-                i += 1
-            });
-            setdates(dates_fetched)
+        setimage(null)
+        requestsateliteimage(latitude, longitude, date).then((res) => {
+            console.log(res.data)
+            setimage(res.data.Image.Url)
 
         }).catch((err) => {
             console.log(err)
@@ -43,17 +27,17 @@ export default function Date_Selector({ latitude, longitude, date, setdate, sets
         <View>
             <View style={{ marginTop: 0, marginBottom: 0 }}>
                 {
-                    dates.length != 0 ?
+                    image != null ?
                         <TouchableOpacity
-                            disabled={date == null}
+                            disabled={image == null}
                             style={styles.button}
-                            onPress={() => { setstep(2) }}
+                            onPress={() => { setstep(3) }}
                         >
-                            <Text style={{ color: WHITE, fontSize: 14 }}>FETCH IMAGE  {date}</Text>
+                            <Text style={{ color: WHITE, fontSize: 14 }}>GET REPORT</Text>
                         </TouchableOpacity>
                         :
                         <ActivityIndicator
-                            animating={dates.length == 0}
+                            animating={image == null}
                             style={[{ height: 80 }]}
                             color="#C00"
                             size="large"
@@ -65,14 +49,19 @@ export default function Date_Selector({ latitude, longitude, date, setdate, sets
             <View style={{ marginTop: 2, marginBottom: 2 }}>
                 <TouchableOpacity
                     style={styles.button}
-                    onPress={() => { setstep(0) }}
+                    onPress={() => { setstep(1) }}
                 >
                     <Text style={{ color: WHITE, fontSize: 14 }}>BACK</Text>
                 </TouchableOpacity>
             </View>
-            <ScrollView style={{ marginTop: 20, height: '80%' }}>
-                {dates}
-            </ScrollView>
+            <Image
+                style={{
+                    width: '100%',
+                    height: undefined,
+                    aspectRatio: 1 / 1
+                }}
+                source={{ uri: image }}
+            />
 
 
         </View >
