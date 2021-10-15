@@ -7,35 +7,40 @@ import { requestPublicNotes } from '../../server/noterequestgenerator';
 import { requestavailabledates } from '../../server/reportrequestgenerator';
 import { BLACK, DARK_GREEN, LIGHT_SILVER, WHITE } from '../../shared/colors';
 
-export default function Date_Selector({ latitude, longitude, date, setdate, setstep }) {
+export default function Date_Selector({ dates, setdates, latitude, longitude, date, setdate, setstep }) {
 
-    const [dates, setdates] = useState([])
 
     console.log(date)
-
+    console.log("Dates Length : ", dates.length)
     useEffect(() => {
-        setdate(null)
-        requestavailabledates(latitude, longitude).then((res) => {
-            console.log(res.data.All_Dates_Available)
-            var dates_fetched = []
-            var i = 0
-            res.data.All_Dates_Available.forEach(day => {
-                dates_fetched.push(
-                    <TouchableOpacity
-                        key={i}
-                        style={styles.datesshow}
-                        onPress={() => { setdate(day) }}
-                    >
-                        <Text style={{ color: BLACK, fontSize: 14 }}>{day}</Text>
-                    </TouchableOpacity>
-                )
-                i += 1
-            });
-            setdates(dates_fetched)
 
-        }).catch((err) => {
-            console.log(err)
-        })
+        if (dates.length == 0) {
+            console.log("IM HERE")
+            setdate(null)
+            requestavailabledates(latitude, longitude).then((res) => {
+                console.log(res.data.All_Dates_Available)
+                var dates_fetched = []
+                var i = 0
+                res.data.All_Dates_Available.forEach(day => {
+                    dates_fetched.push(
+                        <TouchableOpacity
+                            key={i}
+                            style={styles.datesshow}
+                            onPress={() => { setdate(day) }}
+                        >
+                            <Text style={{ color: BLACK, fontSize: 14 }}>{day}</Text>
+                        </TouchableOpacity>
+                    )
+                    i += 1
+                });
+                setdates(dates_fetched)
+
+            }).catch((err) => {
+                console.log(err)
+            })
+
+        }
+
 
     }, []);
 

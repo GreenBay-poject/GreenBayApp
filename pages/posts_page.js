@@ -1,24 +1,24 @@
 import React, { useEffect, useState } from 'react';
 import { ScrollView, Switch, Text, View } from 'react-native';
-import { SafeAreaView, StyleSheet} from 'react-native';
+import { SafeAreaView, StyleSheet } from 'react-native';
 import AuthPosts from '../components/postpage/auth_posts';
 import GuestsPosts from '../components/postpage/guest_posts';
 import { DARK_GREEN, WHITE } from '../shared/colors';
-import {get_email_token_auth} from '../storage/storemanager'
-export default function PostPage({navigation}) {
+import { get_email_token_auth } from '../storage/storemanager'
+export default function PostPage({ navigation }) {
 
     //const [posts,setposts]=useState([])
-    const [user,setuser]=useState(['','',false])
-    const [isauthmode,setisauthmode]=useState(false)
+    const [user, setuser] = useState(['', '', false])
+    const [isauthmode, setisauthmode] = useState(false)
 
-    useEffect(()=>{
+    useEffect(() => {
 
-        get_email_token_auth().then(([email,token,auth])=>{
-            console.log([email,token,auth])
-            const bool_auth= auth=='true'? true:false
-            setuser([email,token,bool_auth])
+        get_email_token_auth().then(([email, token, auth]) => {
+            console.log([email, token, auth])
+            const bool_auth = auth == 'true' ? true : false
+            setuser([email, token, bool_auth])
         });
-    },[]);
+    }, []);
 
     //--one component--
     //Buttons add post  isatuh
@@ -27,15 +27,15 @@ export default function PostPage({navigation}) {
 
     //--two component---
     //view all posts all 
-  
+
     return (
-    <ScrollView>
-        {
-            console.log("AADA"),
-            console.log(user[2]),
-            user[2]?
-            <View >
-                <View style={styles.view}>
+        <ScrollView>
+            {
+                console.log("AADA"),
+                console.log(user[2]),
+                user[2] ?
+                    <View >
+                        {/* <View style={styles.view}>
                 <Text style={styles.text}>AUTH MODE</Text>
                 <Switch
                     style={styles.switch}
@@ -45,41 +45,41 @@ export default function PostPage({navigation}) {
                     onValueChange={()=>{setisauthmode(!isauthmode);console.log("::::"+isauthmode);}}
                     value={isauthmode}
                 />
-                </View>
-                
-            </View>:
-            <View ></View>
-        }
-        {
-            isauthmode?
-                <AuthPosts user={user}/>
-              
-            :
-               <GuestsPosts user={user}/>
-        }
-         
-    </ScrollView>
-  );
+                </View> */}
+
+                    </View> :
+                    <View ></View>
+            }
+            {
+                isauthmode ?
+                    <AuthPosts user={user} />
+
+                    :
+                    <GuestsPosts user={user} />
+            }
+
+        </ScrollView>
+    );
 }
 
 const styles = StyleSheet.create({
     text: {
-        marginTop:10, 
-        fontSize:25,
-        color:WHITE,
-        fontWeight:'bold',
-        alignSelf:'center',  
+        marginTop: 10,
+        fontSize: 25,
+        color: WHITE,
+        fontWeight: 'bold',
+        alignSelf: 'center',
     },
     switch: {
-        marginTop:5,
-        alignSelf:'center',
-        marginBottom:5,
+        marginTop: 5,
+        alignSelf: 'center',
+        marginBottom: 5,
     },
     view: {
-        backgroundColor:DARK_GREEN,
-        
+        backgroundColor: DARK_GREEN,
+
     }
-  
+
 });
 
 
@@ -87,14 +87,14 @@ const styles = StyleSheet.create({
 
 
 // export default function PostPage({navigation}) {
-  
+
 //     return (
 //     <SafeAreaView>
-         
+
 //     </SafeAreaView>
 //   );
 // }
 
 // const styles = StyleSheet.create({
-  
+
 // });

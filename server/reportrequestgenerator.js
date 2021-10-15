@@ -1,9 +1,10 @@
 import axios from "axios"
-import { GET_AVAILABLE_DATES, FETCH_SATELITE_IMAGE } from "./endpoints"
+import { GET_AVAILABLE_DATES, FETCH_SATELITE_IMAGE, GET_LAND_REPORT } from "./endpoints"
 
 export {
     requestavailabledates,
-    requestsateliteimage
+    requestsateliteimage,
+    request_land_report
 }
 
 
@@ -30,4 +31,11 @@ function requestsateliteimage(lat, lon, date) {
             }
         }
     )
+}
+
+function request_land_report(image) {
+
+    const data = { 'url': image }
+    return axios.post(GET_LAND_REPORT, data)
+
 }

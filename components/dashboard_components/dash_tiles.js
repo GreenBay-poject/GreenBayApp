@@ -10,7 +10,7 @@ export default function DashboardButtonTiles({ navigation }) {
 
       <View style={{ flex: 1, flexDirection: "row", justifyContent: 'center' }}>
         <View>
-          <CustomIconButton page_to_go="PostPage" navigation={navigation} ant_design_icon_name="questioncircle" text="Q&A" />
+          <CustomIconButton page_to_go="QnAPage" navigation={navigation} ant_design_icon_name="questioncircle" text="Q&A" />
         </View>
         <View>
           <CustomIconButton page_to_go="LandReportPage" navigation={navigation} ant_design_icon_name="areachart" text="Land Report" />

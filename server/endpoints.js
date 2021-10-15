@@ -10,5 +10,8 @@ export const GET_ALL_POSTS = HOST + "/feed/view_posts"
 
 export const GET_AVAILABLE_DATES = HOST + "/report/get_dates"
 export const FETCH_SATELITE_IMAGE = HOST + "/report/get_image"
+export const GET_LAND_REPORT = HOST + "/report/generate_land_report"
 
 export const GET_PUBLIC_NOTES = HOST + "/note/get_public_note"
+
+export const GET_ALL_QUESTIONS = HOST + "/questions/view_questions"

@@ -6,7 +6,7 @@ import PostCard from '../../atoms/post';
 import { requestPublicNotes } from '../../server/noterequestgenerator';
 import { DARK_GREEN, WHITE } from '../../shared/colors';
 
-export default function Land_Report_Map({ latitude, longitude, setlatitude, setlongitude, setstep }) {
+export default function Land_Report_Map({ setdates, latitude, longitude, setlatitude, setlongitude, setstep }) {
 
 
     useEffect(() => {
@@ -21,7 +21,7 @@ export default function Land_Report_Map({ latitude, longitude, setlatitude, setl
             <View style={{ marginTop: 0, marginBottom: 0 }}>
                 <TouchableOpacity
                     style={styles.button}
-                    onPress={() => { setstep(1) }}
+                    onPress={() => { setdates([]), setstep(1) }}
                 >
                     <Text style={{ color: WHITE, fontSize: 18 }}>GET DATES</Text>
                 </TouchableOpacity>
