@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { Button, StyleSheet, Text, View } from 'react-native';
 import { Chip } from 'react-native-elements';
 import { ScrollView } from 'react-native-gesture-handler';
 import { Title } from 'react-native-paper';
@@ -51,7 +51,7 @@ export default function QnAPage({ navigation }) {
     return (
         <SafeAreaView>
             {user[0] == null ?
-                <Text>Button Redirect to login page</Text> :
+                <Button title="SIGN IN" onPress={() => { navigation.navigate("MyAccount") }} color={DARK_GREEN} /> :
                 <>
                     <View style={{ marginBottom: 12, borderColor: LIGHT_SILVER, borderWidth: 4, borderRadius: 10, width: '100%', alignSelf: 'center' }}></View>
 

@@ -10,7 +10,7 @@ export const PRIMARY = WHITE
 export const SECONDARY = DARK_GREEN
 
 export const PIE_CHART_COLORS = {
-    'agriculture': '#fcba03',
+    'agriculture': '#0f5207',
     'artisinal_mine': '#25b82c',
     'bare_ground': '#0a3d0d',
     'blooming': '#0e5e41',
@@ -23,7 +23,7 @@ export const PIE_CHART_COLORS = {
     'haze': '#302f2f',
     'partly_cloudy': '#b56a47',
     'forest_coverage': '#215575',
-    'road': '#60f784',
+    'road': '#484f4a',
     'selective_logging': '#3b521d',
     'slash_burn': '#688200',
     'water': '#a0b7de'

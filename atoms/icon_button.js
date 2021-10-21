@@ -6,7 +6,7 @@ import { DARK_GREEN, LIGHT_SILVER } from '../shared/colors';
 
 export default function CustomIconButton({ ant_design_icon_name, text, navigation, page_to_go }) {
   return (
-    <TouchableHighlight onPress={() => { navigation.navigate(page_to_go) }} >
+    <TouchableHighlight onPress={() => { navigation.navigate(page_to_go) }} style={styles.touchable} >
       <View style={styles.button}>
         <AntDesign name={ant_design_icon_name} size={70} color={DARK_GREEN} />
         <Text style={styles.text}>{text}</Text>
@@ -16,6 +16,18 @@ export default function CustomIconButton({ ant_design_icon_name, text, navigatio
 }
 
 const styles = StyleSheet.create({
+  touchable: {
+    borderRadius: 20,
+    elevation: 2,
+    borderColor: DARK_GREEN,
+    borderWidth: 0,
+    marginHorizontal: 5,
+    padding: 0,
+    width: 130,
+    flex: 1,
+    backgroundColor: LIGHT_SILVER,
+    alignItems: 'center',
+  },
   button: {
     borderRadius: 20,
     elevation: 2,

@@ -1,15 +1,24 @@
 import { StatusBar } from 'expo-status-bar';
 import React from 'react';
-import { Image, StyleSheet, Text, View } from 'react-native';
+import { Image, Linking, StyleSheet, Text, View } from 'react-native';
 import { BottomSheet, ListItem } from 'react-native-elements';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import StretchCard from '../../atoms/stretch_card';
 import { DARK_GREEN, PRIMARY, WHITE } from '../../shared/colors';
 
 export default function DashBoardBottomSheet({ isVisible, setIsVisible }) {
+    var handleClick = (url) => {
+        Linking.canOpenURL(url).then(supported => {
+            if (supported) {
+                Linking.openURL(url);
+            } else {
+                console.log("Don't know how to open URI: " + url);
+            }
+        });
+    };
 
     const list = [
-        { title: 'Web', containerStyle: styles.containerStyle, titleStyle: styles.title, },
+        { title: 'Web', containerStyle: styles.containerStyle, titleStyle: styles.title, onPress: () => { handleClick("http://52.14.144.199/") } },
         { title: 'YouTube', containerStyle: styles.containerStyle, titleStyle: styles.title, },
         { title: 'LinkedIn', containerStyle: styles.containerStyle, titleStyle: styles.title, },
         {

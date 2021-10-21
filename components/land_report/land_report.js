@@ -32,7 +32,7 @@ export default function Land_Report({ image, setstep }) {
             Object.keys(percentages).forEach(key => {
                 sliceColor1.push(PIE_CHART_COLORS[key])
                 series1.push(percentages[key])
-                names1.push(<Text key={i} style={{ color: PIE_CHART_COLORS[key], fontSize: 18 }}>{key} : {percentages[key]} %</Text>)
+                names1.push(<Text key={"KXFRF" + i} style={{ color: PIE_CHART_COLORS[key], fontSize: 18 }}>{key} : {percentages[key]} %</Text>)
                 console.log(percentages[key])
                 i += 1
             });
@@ -43,7 +43,7 @@ export default function Land_Report({ image, setstep }) {
                 parts1.push(
                     <>
 
-                        <Text key={j}>P{j + 1} - {part + ""}</Text>
+                        <Text key={"FECOSFWS" + j}>P{j + 1} - {part + ""}</Text>
                     </>
                 )
                 j += 1
@@ -97,45 +97,47 @@ export default function Land_Report({ image, setstep }) {
                     </TouchableOpacity>
                 </View>
             </View>
-            <>
-                <View style={{ marginTop: 75, borderColor: DARK_GREEN, borderWidth: 1, borderRadius: 10, width: '95%', alignSelf: 'center' }}></View>
-                <Text style={{ alignSelf: 'center', fontSize: 25, fontWeight: 'bold' }}>REPORT</Text>
-                <View style={{ marginBottom: 42, borderColor: DARK_GREEN, borderWidth: 1, borderRadius: 10, width: '95%', alignSelf: 'center' }}></View>
+            {names.length > 0 ?
+                <>
+                    <View key="Reportkey1" style={{ marginTop: 75, borderColor: DARK_GREEN, borderWidth: 1, borderRadius: 10, width: '95%', alignSelf: 'center' }}></View>
+                    <Text key="Reportkey2" style={{ alignSelf: 'center', fontSize: 25, fontWeight: 'bold' }}>REPORT</Text>
+                    <View key="Reportkey3" style={{ marginBottom: 42, borderColor: DARK_GREEN, borderWidth: 1, borderRadius: 10, width: '95%', alignSelf: 'center' }}></View>
 
 
-                <View style={{ alignSelf: 'center' }}>
-                    <PieChart
-                        widthAndHeight={widthAndHeight}
-                        series={series}
-                        sliceColor={sliceColor}
-                        doughnut={false}
-                        coverRadius={0.45}
-                        coverFill={'#FFF'}
+                    <View key="Reportkey4" style={{ alignSelf: 'center' }}>
+                        <PieChart
+                            key="Reportkey5"
+                            widthAndHeight={widthAndHeight}
+                            series={series}
+                            sliceColor={sliceColor}
+                            doughnut={false}
+                            coverRadius={0.45}
+                            coverFill={'#FFF'}
+                        />
+                    </View>
+                    <View style={{ marginTop: 42, borderColor: DARK_GREEN, borderWidth: 1, borderRadius: 10, width: '95%', alignSelf: 'center' }}></View>
+                    <View style={{ alignSelf: 'center' }}>
+                        {names}
+                    </View>
+                    <View style={{ marginTop: 12, borderColor: DARK_GREEN, borderWidth: 1, borderRadius: 10, width: '95%', alignSelf: 'center' }}></View>
+                    <Text style={{ alignSelf: 'center', fontSize: 25, fontWeight: 'bold' }}>CONTENT</Text>
+                    <View style={{ marginBottom: 12, borderColor: DARK_GREEN, borderWidth: 1, borderRadius: 10, width: '95%', alignSelf: 'center' }}></View>
+                    <Image
+                        style={{
+                            alignSelf: 'center',
+                            alignItems: 'center',
+                            alignContent: 'center',
+                            width: '40%',
+                            height: undefined,
+                            aspectRatio: 1 / 1
+                        }}
+                        source={{ uri: "https://www.researchgate.net/profile/Octa-Heriana/publication/322415404/figure/fig1/AS:692055437213696@1542010282106/3x3-pixel-matrix-of-image.png" }}
                     />
-                </View>
-                <View style={{ marginTop: 42, borderColor: DARK_GREEN, borderWidth: 1, borderRadius: 10, width: '95%', alignSelf: 'center' }}></View>
-                <View style={{ alignSelf: 'center' }}>
-                    {names}
-                </View>
-                <View style={{ marginTop: 12, borderColor: DARK_GREEN, borderWidth: 1, borderRadius: 10, width: '95%', alignSelf: 'center' }}></View>
-                <Text style={{ alignSelf: 'center', fontSize: 25, fontWeight: 'bold' }}>CONTENT</Text>
-                <View style={{ marginBottom: 12, borderColor: DARK_GREEN, borderWidth: 1, borderRadius: 10, width: '95%', alignSelf: 'center' }}></View>
-                <Image
-                    style={{
-                        alignSelf: 'center',
-                        alignItems: 'center',
-                        alignContent: 'center',
-                        width: '40%',
-                        height: undefined,
-                        aspectRatio: 1 / 1
-                    }}
-                    source={{ uri: "https://www.researchgate.net/profile/Octa-Heriana/publication/322415404/figure/fig1/AS:692055437213696@1542010282106/3x3-pixel-matrix-of-image.png" }}
-                />
-                <View style={{ marginTop: 12, borderColor: DARK_GREEN, borderWidth: 1, borderRadius: 10, width: '95%', alignSelf: 'center' }}></View>
-                <View style={{ marginBottom: 45, }}>
-                    {parts}
-                </View>
-            </>
+                    <View style={{ marginTop: 12, borderColor: DARK_GREEN, borderWidth: 1, borderRadius: 10, width: '95%', alignSelf: 'center' }}></View>
+                    <View style={{ marginBottom: 45, }}>
+                        {parts}
+                    </View>
+                </> : <></>}
         </ScrollView >
 
     );
