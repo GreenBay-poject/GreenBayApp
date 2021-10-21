@@ -16,8 +16,8 @@ export default function Land_Report({ image, setstep }) {
     const [series, setseries] = useState([123, 321, 123, 789, 537])
     const [sliceColor, setsliceColor] = useState(['#F44336', '#2196F3', '#FFEB3B', '#4CAF50', '#FF9800'])
     const [names, setnames] = useState([])
-
     const [parts, setparts] = useState([])
+    const image_tag_order = [1, 4, 7, 2, 5, 8, 3, 6, 9]
 
 
     useEffect(() => {
@@ -43,7 +43,7 @@ export default function Land_Report({ image, setstep }) {
                 parts1.push(
                     <>
 
-                        <Text key={"FECOSFWS" + j}>P{j + 1} - {part + ""}</Text>
+                        <Text key={"FECOSFWS" + j}>P{image_tag_order[j]} - {part + ""}</Text>
                     </>
                 )
                 j += 1
