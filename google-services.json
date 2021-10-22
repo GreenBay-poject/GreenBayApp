@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "182897648478",
+    "project_id": "greenbay-app",
+    "storage_bucket": "greenbay-app.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:182897648478:android:874ab9fc4028918352e5cf",
+        "android_client_info": {
+          "package_name": "app.greenbay.com"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "182897648478-1aohrq11mhmvh4fpj3evhk121f07j9bv.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDj6zJeRQ2Qc495hI0BVyKMRk0FeBfHCHc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "182897648478-1aohrq11mhmvh4fpj3evhk121f07j9bv.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -24,7 +24,8 @@
         "foregroundImage": "./assets/icon2.png",
         "backgroundColor": "#FFFFFF"
       },
-      "package": "app.greenbay.com"
+      "package": "app.greenbay.com",
+      "googleServicesFile": "./google-services.json"
     },
     "web": {
       "favicon": "./assets/favicon.png"
