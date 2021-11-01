@@ -8,7 +8,7 @@ import { AntDesign } from '@expo/vector-icons';
 
 export default function DashboardRows({ navigation }) {
   var handleClick = () => {
-    var url = "http://52.14.144.199/"
+    var url = "https://ibb.co/CJGGzy5"
     Linking.canOpenURL(url).then(supported => {
       if (supported) {
         Linking.openURL(url);

@@ -24,7 +24,7 @@ export default class Ticker extends PureComponent {
                         animationType='scroll'
                         bounce={0}
                     >
-                        | Notes | You may have found a special places for research,In here you can add notes to your own map.These notes are only visible for you                </TextTicker>
+                        Get deforestation report on selected area. To generate report we use AI techniques. View private notes by you and public notes by authority users. You can view the answeres supplied by ministry officers to arising questions. You can ask questions thorugh our website. The authorities publish posts in this platform. You can observe them and update your knowledge                </TextTicker>
                 </View>
                 {/* <View
                     style={{
