@@ -167,7 +167,7 @@ export default function SignInForm({ navigation }) {
 
           </>
           :
-          <ScrollView>
+          <ScrollView style={{ width: '100%' }}>
             <Text style={styles.slider_header}>SIGN UP</Text>
             <TextInput
               style={styles.input}
@@ -242,7 +242,8 @@ const styles = StyleSheet.create({
   below_button: {
     color: DARK_BLUE,
     alignItems: 'center',
-    padding: 10
+    padding: 10,
+    alignSelf: 'center'
   },
   container: {
     alignItems: 'center'
