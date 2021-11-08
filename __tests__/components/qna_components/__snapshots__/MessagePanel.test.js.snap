@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<MessagePanel /> Sample MessagePanel 1`] = `
+<RCTScrollView
+  style={
+    Object {
+      "height": "80%",
+    }
+  }
+>
+  <View />
+</RCTScrollView>
+`;

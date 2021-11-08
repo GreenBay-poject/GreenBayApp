@@ -1,10 +1,10 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
-import Dashboard from '../../pages/dashboard'
+import Land_Report_page from '../../pages/land_report_page'
 
-describe('<Dashboard />', () => {
-    it('Sample Dashboard', () => {
-        const tree = renderer.create(<Dashboard />).toJSON();
+describe('<Land_Report_page />', () => {
+    it('Sample Land_Report_page', () => {
+        const tree = renderer.create(<Land_Report_page />).toJSON();
         expect(tree).toMatchSnapshot();
         //expect(tree.children[0].children[0].type).toBe('View');
         //expect(tree.children[0].children[1].type).toBe('View');

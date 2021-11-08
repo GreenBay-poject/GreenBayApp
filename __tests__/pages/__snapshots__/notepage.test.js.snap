@@ -1,0 +1,22 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<NotePage /> Sample NotePage 1`] = `
+<RCTScrollView>
+  <View>
+    <View />
+    <ActivityIndicator
+      animating={true}
+      color="#C00"
+      hidesWhenStopped={true}
+      size="large"
+      style={
+        Array [
+          Object {
+            "height": 80,
+          },
+        ]
+      }
+    />
+  </View>
+</RCTScrollView>
+`;
