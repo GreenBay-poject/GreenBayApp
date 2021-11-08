@@ -1,0 +1,104 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Image_Viewer /> Sample Image_Viewer 1`] = `
+<View>
+  <View
+    style={
+      Object {
+        "marginBottom": 0,
+        "marginTop": 0,
+      }
+    }
+  >
+    <View
+      accessible={true}
+      focusable={true}
+      onClick={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        Object {
+          "alignItems": "center",
+          "alignSelf": "center",
+          "backgroundColor": "#153d37",
+          "borderRadius": 10,
+          "opacity": 1,
+          "padding": 10,
+          "width": "95%",
+        }
+      }
+    >
+      <Text
+        style={
+          Object {
+            "color": "#FFFFFF",
+            "fontSize": 14,
+          }
+        }
+      >
+        GET REPORT
+      </Text>
+    </View>
+  </View>
+  <View
+    style={
+      Object {
+        "marginBottom": 2,
+        "marginTop": 2,
+      }
+    }
+  >
+    <View
+      accessible={true}
+      focusable={true}
+      onClick={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        Object {
+          "alignItems": "center",
+          "alignSelf": "center",
+          "backgroundColor": "#153d37",
+          "borderRadius": 10,
+          "opacity": 1,
+          "padding": 10,
+          "width": "95%",
+        }
+      }
+    >
+      <Text
+        style={
+          Object {
+            "color": "#FFFFFF",
+            "fontSize": 14,
+          }
+        }
+      >
+        BACK
+      </Text>
+    </View>
+  </View>
+  <Image
+    source={
+      Object {
+        "uri": "https://apktada.com/storage/images/com/johartest/com.johartest_1.png",
+      }
+    }
+    style={
+      Object {
+        "aspectRatio": 1,
+        "height": undefined,
+        "width": "100%",
+      }
+    }
+  />
+</View>
+`;

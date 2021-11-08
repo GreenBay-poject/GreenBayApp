@@ -1,0 +1,213 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<DashboardRows /> Sample DashboardRows 1`] = `
+Array [
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "backgroundColor": "#FFFFFF",
+        "flex": 1,
+        "justifyContent": "center",
+      }
+    }
+  >
+    <View
+      accessible={true}
+      focusable={true}
+      onClick={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        Object {
+          "alignSelf": "stretch",
+          "borderColor": "#153d37",
+          "borderRadius": 30,
+          "borderWidth": 1,
+          "elevation": 4,
+          "marginHorizontal": 20,
+        }
+      }
+    >
+      <View
+        style={
+          Object {
+            "alignSelf": "stretch",
+            "backgroundColor": "#d7dbd8",
+            "borderRadius": 30,
+            "flex": 1,
+            "flexDirection": "row",
+            "height": 120,
+          }
+        }
+      >
+        <View
+          style={
+            Object {
+              "alignItems": "center",
+              "backgroundColor": "#d7dbd8",
+              "borderRadius": 30,
+              "flex": 1.5,
+              "fontSize": 17,
+              "fontWeight": "bold",
+              "paddingTop": 20,
+            }
+          }
+        >
+          <Text />
+        </View>
+        <View
+          style={
+            Object {
+              "alignItems": "center",
+              "backgroundColor": "#d7dbd8",
+              "borderRadius": 30,
+              "flex": 3,
+              "fontSize": 15,
+              "textAlign": "center",
+            }
+          }
+        >
+          <Text
+            style={
+              Object {
+                "color": "#153d37",
+                "fontSize": 17,
+                "fontWeight": "bold",
+                "marginTop": 15,
+              }
+            }
+          >
+            My Account
+          </Text>
+          <Text
+            style={
+              Object {
+                "color": "#153d37",
+                "fontSize": 15,
+                "marginLeft": 15,
+                "marginRight": 15,
+                "marginTop": 15,
+                "textAlign": "center",
+              }
+            }
+          >
+            Handle all things related to you user account
+          </Text>
+        </View>
+      </View>
+    </View>
+  </View>,
+  <View
+    style={
+      Object {
+        "height": 10,
+      }
+    }
+  />,
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "backgroundColor": "#FFFFFF",
+        "flex": 1,
+        "justifyContent": "center",
+      }
+    }
+  >
+    <View
+      accessible={true}
+      focusable={true}
+      onClick={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        Object {
+          "alignSelf": "stretch",
+          "borderColor": "#153d37",
+          "borderRadius": 30,
+          "borderWidth": 1,
+          "elevation": 4,
+          "marginHorizontal": 20,
+        }
+      }
+    >
+      <View
+        style={
+          Object {
+            "alignSelf": "stretch",
+            "backgroundColor": "#d7dbd8",
+            "borderRadius": 30,
+            "flex": 1,
+            "flexDirection": "row",
+            "height": 120,
+          }
+        }
+      >
+        <View
+          style={
+            Object {
+              "alignItems": "center",
+              "backgroundColor": "#d7dbd8",
+              "borderRadius": 30,
+              "flex": 1.5,
+              "fontSize": 17,
+              "fontWeight": "bold",
+              "paddingTop": 20,
+            }
+          }
+        >
+          <Text />
+        </View>
+        <View
+          style={
+            Object {
+              "alignItems": "center",
+              "backgroundColor": "#d7dbd8",
+              "borderRadius": 30,
+              "flex": 3,
+              "fontSize": 15,
+              "textAlign": "center",
+            }
+          }
+        >
+          <Text
+            style={
+              Object {
+                "color": "#153d37",
+                "fontSize": 17,
+                "fontWeight": "bold",
+                "marginTop": 15,
+              }
+            }
+          >
+            About Us
+          </Text>
+          <Text
+            style={
+              Object {
+                "color": "#153d37",
+                "fontSize": 15,
+                "marginLeft": 15,
+                "marginRight": 15,
+                "marginTop": 15,
+                "textAlign": "center",
+              }
+            }
+          >
+            Are you curious to know, who we are ... what we do ...
+          </Text>
+        </View>
+      </View>
+    </View>
+  </View>,
+]
+`;

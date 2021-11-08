@@ -1,0 +1,186 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Bubble /> With Not Null Answer 1`] = `
+<View>
+  <View
+    style={
+      Object {
+        "alignSelf": "flex-start",
+        "backgroundColor": "#d7dbd8",
+        "borderRadius": 13,
+        "marginVertical": 12,
+        "padding": 12,
+        "width": "80%",
+      }
+    }
+  >
+    <Text
+      style={
+        Object {
+          "fontSize": 13,
+          "fontWeight": "bold",
+          "marginBottom": 10,
+        }
+      }
+    >
+      
+    </Text>
+    <Text
+      style={
+        Object {
+          "fontSize": 12,
+        }
+      }
+    >
+      Sample Question
+    </Text>
+    <Text
+      style={
+        Object {
+          "alignSelf": "flex-end",
+          "fontSize": 10,
+        }
+      }
+    >
+      asked by 
+      Saman Perera
+    </Text>
+    <Text
+      style={
+        Object {
+          "alignSelf": "flex-end",
+          "fontSize": 10,
+        }
+      }
+    >
+      on 
+      2021-11-02
+    </Text>
+  </View>
+  <View
+    style={
+      Object {
+        "alignSelf": "flex-end",
+        "backgroundColor": "#d7dbd8",
+        "borderRadius": 13,
+        "marginVertical": 12,
+        "padding": 12,
+        "width": "80%",
+      }
+    }
+  >
+    <Text
+      style={
+        Object {
+          "alignSelf": "flex-start",
+          "fontSize": 12,
+        }
+      }
+    />
+    <Text
+      style={
+        Object {
+          "alignSelf": "flex-end",
+          "fontSize": 10,
+        }
+      }
+    >
+      answered by 
+    </Text>
+    <Text
+      style={
+        Object {
+          "alignSelf": "flex-end",
+          "fontSize": 10,
+        }
+      }
+    >
+      on 
+    </Text>
+  </View>
+</View>
+`;
+
+exports[`<Bubble /> With Null Answer 1`] = `
+<View>
+  <View
+    style={
+      Object {
+        "alignSelf": "flex-start",
+        "backgroundColor": "#d7dbd8",
+        "borderRadius": 13,
+        "marginVertical": 12,
+        "padding": 12,
+        "width": "80%",
+      }
+    }
+  >
+    <Text
+      style={
+        Object {
+          "fontSize": 13,
+          "fontWeight": "bold",
+          "marginBottom": 10,
+        }
+      }
+    >
+      
+    </Text>
+    <Text
+      style={
+        Object {
+          "fontSize": 12,
+        }
+      }
+    >
+      Sample Question
+    </Text>
+    <Text
+      style={
+        Object {
+          "alignSelf": "flex-end",
+          "fontSize": 10,
+        }
+      }
+    >
+      asked by 
+      Saman Perera
+    </Text>
+    <Text
+      style={
+        Object {
+          "alignSelf": "flex-end",
+          "fontSize": 10,
+        }
+      }
+    >
+      on 
+      2021-11-02
+    </Text>
+  </View>
+  <View
+    style={
+      Object {
+        "alignSelf": "flex-end",
+        "backgroundColor": "#d7dbd8",
+        "borderRadius": 13,
+        "marginVertical": 12,
+        "padding": 12,
+      }
+    }
+  >
+    <Text
+      style={
+        Object {
+          "alignSelf": "flex-start",
+          "fontSize": 13,
+          "fontWeight": "bold",
+          "marginBottom": 10,
+        }
+      }
+    >
+      Not Answered Yet
+    </Text>
+  </View>
+</View>
+`;

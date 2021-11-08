@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Image, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 import { Chip } from 'react-native-elements';
-import { ScrollView } from 'react-native-gesture-handler';
+import { ScrollView, TouchableHighlight } from 'react-native-gesture-handler';
 import { Title } from 'react-native-paper';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import VisitWeb from '../atoms/visitweb';
@@ -29,12 +29,12 @@ export default function Dashboard({ navigation }) {
         </View>
         <DashboardSlider />
         <View style={{ marginTop: 20 }}>
-          <TouchableOpacity
+          <TouchableHighlight
             style={styles.button}
             onPress={() => { setIsVisible(true) }}
           >
             <Text style={{ color: WHITE, fontSize: 18 }}>VISIT US</Text>
-          </TouchableOpacity>
+          </TouchableHighlight>
         </View>
 
 

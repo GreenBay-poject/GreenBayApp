@@ -1,0 +1,74 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Land_Report /> Sample Land_Report 1`] = `
+<RCTScrollView>
+  <View>
+    <View>
+      <View
+        style={
+          Object {
+            "marginBottom": 0,
+            "marginTop": 0,
+          }
+        }
+      >
+        <ActivityIndicator
+          animating={true}
+          color="#C00"
+          hidesWhenStopped={true}
+          size="large"
+          style={
+            Array [
+              Object {
+                "height": 80,
+              },
+            ]
+          }
+        />
+      </View>
+      <View
+        style={
+          Object {
+            "marginBottom": 2,
+            "marginTop": 2,
+          }
+        }
+      >
+        <View
+          accessible={true}
+          focusable={true}
+          onClick={[Function]}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          style={
+            Object {
+              "alignItems": "center",
+              "alignSelf": "center",
+              "backgroundColor": "#153d37",
+              "borderRadius": 10,
+              "opacity": 1,
+              "padding": 10,
+              "width": "95%",
+            }
+          }
+        >
+          <Text
+            style={
+              Object {
+                "color": "#FFFFFF",
+                "fontSize": 14,
+              }
+            }
+          >
+            BACK
+          </Text>
+        </View>
+      </View>
+    </View>
+  </View>
+</RCTScrollView>
+`;

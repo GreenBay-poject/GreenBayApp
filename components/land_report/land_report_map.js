@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { ActivityIndicator, Button, Dimensions, PixelRatio, TouchableOpacity } from 'react-native';
 import { SafeAreaView, ScrollView, StyleSheet, Text, View } from 'react-native';
+import { TouchableHighlight } from 'react-native-gesture-handler';
 import MapView, { Marker } from 'react-native-maps';
 import PostCard from '../../atoms/post';
 import { requestPublicNotes } from '../../server/noterequestgenerator';
@@ -19,12 +20,12 @@ export default function Land_Report_Map({ setdates, latitude, longitude, setlati
     return (
         <View>
             <View style={{ marginTop: 0, marginBottom: 0 }}>
-                <TouchableOpacity
+                <TouchableHighlight
                     style={styles.button}
                     onPress={() => { setdates([]), setstep(1) }}
                 >
                     <Text style={{ color: WHITE, fontSize: 18 }}>GET DATES</Text>
-                </TouchableOpacity>
+                </TouchableHighlight>
             </View>
             <MapView
                 style={styles.mapview}

@@ -1,0 +1,103 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Date_Selector /> Sample Date_Selector 1`] = `
+<View>
+  <View
+    style={
+      Object {
+        "marginBottom": 0,
+        "marginTop": 0,
+      }
+    }
+  >
+    <View
+      accessible={true}
+      focusable={true}
+      onClick={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        Object {
+          "alignItems": "center",
+          "alignSelf": "center",
+          "backgroundColor": "#153d37",
+          "borderRadius": 10,
+          "opacity": 1,
+          "padding": 10,
+          "width": "95%",
+        }
+      }
+    >
+      <Text
+        style={
+          Object {
+            "color": "#FFFFFF",
+            "fontSize": 14,
+          }
+        }
+      >
+        FETCH IMAGE  
+        2021-08-11
+      </Text>
+    </View>
+  </View>
+  <View
+    style={
+      Object {
+        "marginBottom": 2,
+        "marginTop": 2,
+      }
+    }
+  >
+    <View
+      accessible={true}
+      focusable={true}
+      onClick={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        Object {
+          "alignItems": "center",
+          "alignSelf": "center",
+          "backgroundColor": "#153d37",
+          "borderRadius": 10,
+          "opacity": 1,
+          "padding": 10,
+          "width": "95%",
+        }
+      }
+    >
+      <Text
+        style={
+          Object {
+            "color": "#FFFFFF",
+            "fontSize": 14,
+          }
+        }
+      >
+        BACK
+      </Text>
+    </View>
+  </View>
+  <RCTScrollView
+    style={
+      Object {
+        "height": "80%",
+        "marginTop": 20,
+      }
+    }
+  >
+    <View>
+      2021-08-11
+    </View>
+  </RCTScrollView>
+</View>
+`;

@@ -1,0 +1,282 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Details /> Sample Details 1`] = `
+<RCTScrollView>
+  <View>
+    <ActivityIndicator
+      animating={true}
+      color="#C00"
+      hidesWhenStopped={true}
+      size="large"
+      style={
+        Array [
+          Object {
+            "height": 80,
+          },
+        ]
+      }
+    />
+    <View
+      accessibilityRole="button"
+      accessibilityState={Object {}}
+      accessible={true}
+      focusable={true}
+      onClick={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        Object {
+          "opacity": 1,
+        }
+      }
+    >
+      <View
+        style={
+          Array [
+            Object {},
+          ]
+        }
+      >
+        <Text
+          disabled={false}
+          style={
+            Array [
+              Object {
+                "color": "#007AFF",
+                "fontSize": 18,
+                "margin": 8,
+                "textAlign": "center",
+              },
+              Object {
+                "color": "#8f0b1b",
+              },
+            ]
+          }
+        >
+          LOG OUT
+        </Text>
+      </View>
+    </View>
+    <Text
+      style={
+        Object {
+          "alignSelf": "stretch",
+          "backgroundColor": "#d7dbd8",
+          "color": "#153d37",
+          "fontSize": 20,
+          "fontWeight": "bold",
+          "textAlign": "center",
+        }
+      }
+    >
+      Name
+    </Text>
+    <Text
+      style={
+        Object {
+          "alignSelf": "stretch",
+          "borderWidth": 1,
+          "height": 40,
+          "margin": 12,
+          "padding": 10,
+        }
+      }
+    >
+      
+    </Text>
+    <Text
+      style={
+        Object {
+          "alignSelf": "stretch",
+          "backgroundColor": "#d7dbd8",
+          "color": "#153d37",
+          "fontSize": 20,
+          "fontWeight": "bold",
+          "textAlign": "center",
+        }
+      }
+    >
+      Email
+    </Text>
+    <Text
+      style={
+        Object {
+          "alignSelf": "stretch",
+          "borderWidth": 1,
+          "height": 40,
+          "margin": 12,
+          "padding": 10,
+        }
+      }
+    >
+      
+    </Text>
+    <Text
+      style={
+        Object {
+          "alignSelf": "stretch",
+          "backgroundColor": "#d7dbd8",
+          "color": "#153d37",
+          "fontSize": 20,
+          "fontWeight": "bold",
+          "textAlign": "center",
+        }
+      }
+    >
+      Authorized
+    </Text>
+    <Text
+      style={
+        Object {
+          "alignSelf": "stretch",
+          "borderWidth": 1,
+          "height": 40,
+          "margin": 12,
+          "padding": 10,
+        }
+      }
+    >
+      
+    </Text>
+    <Text
+      style={
+        Object {
+          "alignSelf": "stretch",
+          "backgroundColor": "#d7dbd8",
+          "color": "#153d37",
+          "fontSize": 20,
+          "fontWeight": "bold",
+          "textAlign": "center",
+        }
+      }
+    >
+      Age
+    </Text>
+    <Text
+      style={
+        Object {
+          "alignSelf": "stretch",
+          "borderWidth": 1,
+          "height": 40,
+          "margin": 12,
+          "padding": 10,
+        }
+      }
+    >
+      
+    </Text>
+    <Text
+      style={
+        Object {
+          "alignSelf": "stretch",
+          "backgroundColor": "#d7dbd8",
+          "color": "#153d37",
+          "fontSize": 20,
+          "fontWeight": "bold",
+          "textAlign": "center",
+        }
+      }
+    >
+      Gender
+    </Text>
+    <Text
+      style={
+        Object {
+          "alignSelf": "stretch",
+          "borderWidth": 1,
+          "height": 40,
+          "margin": 12,
+          "padding": 10,
+        }
+      }
+    >
+      
+    </Text>
+    <Text
+      style={
+        Object {
+          "alignSelf": "stretch",
+          "backgroundColor": "#d7dbd8",
+          "color": "#153d37",
+          "fontSize": 20,
+          "fontWeight": "bold",
+          "textAlign": "center",
+        }
+      }
+    >
+      Address
+    </Text>
+    <Text
+      style={
+        Object {
+          "alignSelf": "stretch",
+          "borderWidth": 1,
+          "height": 40,
+          "margin": 12,
+          "padding": 10,
+        }
+      }
+    >
+      
+    </Text>
+    <Text
+      style={
+        Object {
+          "alignSelf": "stretch",
+          "backgroundColor": "#d7dbd8",
+          "color": "#153d37",
+          "fontSize": 20,
+          "fontWeight": "bold",
+          "textAlign": "center",
+        }
+      }
+    >
+      Postalcode
+    </Text>
+    <Text
+      style={
+        Object {
+          "alignSelf": "stretch",
+          "borderWidth": 1,
+          "height": 40,
+          "margin": 12,
+          "padding": 10,
+        }
+      }
+    >
+      
+    </Text>
+    <Text
+      style={
+        Object {
+          "alignSelf": "stretch",
+          "backgroundColor": "#d7dbd8",
+          "color": "#153d37",
+          "fontSize": 20,
+          "fontWeight": "bold",
+          "textAlign": "center",
+        }
+      }
+    >
+      Reg. Date
+    </Text>
+    <Text
+      style={
+        Object {
+          "alignSelf": "stretch",
+          "borderWidth": 1,
+          "height": 40,
+          "margin": 12,
+          "padding": 10,
+        }
+      }
+    >
+      
+    </Text>
+  </View>
+</RCTScrollView>
+`;

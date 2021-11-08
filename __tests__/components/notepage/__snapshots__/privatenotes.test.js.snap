@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<PrivateNote /> Sample PrivateNote 1`] = `
+<ActivityIndicator
+  animating={true}
+  color="#C00"
+  hidesWhenStopped={true}
+  size="large"
+  style={
+    Array [
+      Object {
+        "height": 80,
+      },
+    ]
+  }
+/>
+`;

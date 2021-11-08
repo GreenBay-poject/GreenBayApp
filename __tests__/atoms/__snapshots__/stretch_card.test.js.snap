@@ -1,0 +1,93 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<StretchCard /> Sample StretchCard 1`] = `
+<View
+  accessible={true}
+  focusable={true}
+  onClick={[Function]}
+  onResponderGrant={[Function]}
+  onResponderMove={[Function]}
+  onResponderRelease={[Function]}
+  onResponderTerminate={[Function]}
+  onResponderTerminationRequest={[Function]}
+  onStartShouldSetResponder={[Function]}
+  style={
+    Object {
+      "alignSelf": "stretch",
+      "borderColor": "#153d37",
+      "borderRadius": 30,
+      "borderWidth": 1,
+      "elevation": 4,
+      "marginHorizontal": 20,
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "alignSelf": "stretch",
+        "backgroundColor": "#d7dbd8",
+        "borderRadius": 30,
+        "flex": 1,
+        "flexDirection": "row",
+        "height": 120,
+      }
+    }
+  >
+    <View
+      style={
+        Object {
+          "alignItems": "center",
+          "backgroundColor": "#d7dbd8",
+          "borderRadius": 30,
+          "flex": 1.5,
+          "fontSize": 17,
+          "fontWeight": "bold",
+          "paddingTop": 20,
+        }
+      }
+    >
+      <Text />
+    </View>
+    <View
+      style={
+        Object {
+          "alignItems": "center",
+          "backgroundColor": "#d7dbd8",
+          "borderRadius": 30,
+          "flex": 3,
+          "fontSize": 15,
+          "textAlign": "center",
+        }
+      }
+    >
+      <Text
+        style={
+          Object {
+            "color": "#153d37",
+            "fontSize": 17,
+            "fontWeight": "bold",
+            "marginTop": 15,
+          }
+        }
+      >
+        Sample
+      </Text>
+      <Text
+        style={
+          Object {
+            "color": "#153d37",
+            "fontSize": 15,
+            "marginLeft": 15,
+            "marginRight": 15,
+            "marginTop": 15,
+            "textAlign": "center",
+          }
+        }
+      >
+        Sample Paragraph
+      </Text>
+    </View>
+  </View>
+</View>
+`;
