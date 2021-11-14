@@ -11,17 +11,17 @@ export default function Image_Viewer({ latitude, longitude, date, image, setimag
 
 
 
-    useEffect(() => {
-        setimage(null)
-        requestsateliteimage(latitude, longitude, date).then((res) => {
-            console.log(res.data)
-            setimage(res.data.Image.Url)
+    // useEffect(() => {
+    //     setimage(null)
+    //     requestsateliteimage(latitude, longitude, date).then((res) => {
+    //         console.log(res.data)
+    //         setimage(res.data.Image.Url)
 
-        }).catch((err) => {
-            console.log(err)
-        })
+    //     }).catch((err) => {
+    //         console.log(err)
+    //     })
 
-    }, []);
+    // }, []);
 
     return (
         <View>

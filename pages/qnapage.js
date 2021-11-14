@@ -24,27 +24,27 @@ export default function QnAPage({ navigation }) {
 
     const [user, setuser] = useState([null, null, false])
 
-    useEffect(() => {
+    // useEffect(() => {
 
-        get_email_token_auth().then(([email, token, auth]) => {
-            //console.log([email,token,auth])
-            const bool_auth = auth == 'true' ? true : false
-            setuser([email, token, bool_auth])
+    //     get_email_token_auth().then(([email, token, auth]) => {
+    //         //console.log([email,token,auth])
+    //         const bool_auth = auth == 'true' ? true : false
+    //         setuser([email, token, bool_auth])
 
-            if (email != null && token != null) {
-                requestAllQuestions(email, token).then((res) => {
-                    console.log(res.data.ALL_QUESTIONS)
-                    set_all_messages(res.data.ALL_QUESTIONS)
+    //         if (email != null && token != null) {
+    //             requestAllQuestions(email, token).then((res) => {
+    //                 console.log(res.data.ALL_QUESTIONS)
+    //                 set_all_messages(res.data.ALL_QUESTIONS)
 
-                }).catch((err) => {
-                    console.log(err)
-                })
-            }
+    //             }).catch((err) => {
+    //                 console.log(err)
+    //             })
+    //         }
 
 
 
-        });
-    }, []);
+    //     });
+    // }, []);
 
 
 

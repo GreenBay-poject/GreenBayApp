@@ -22,48 +22,48 @@ export default function MinistrySelector({ all_messages, setmessagetoshow, set_m
         'https://w7.pngwing.com/pngs/490/231/png-transparent-round-red-and-brown-logo-circle-design-product-seal-badge-red-badges-and-labels-maroon-oval.png'
     ]
 
-    useEffect(() => {
-        const btns1 = []
-        if (all_messages.length != 0) {
+    // useEffect(() => {
+    //     const btns1 = []
+    //     if (all_messages.length != 0) {
 
-            console.log(Object.keys(all_messages))
-            var i = 0;
-            Object.keys(all_messages).forEach((min_name) => {
-                btns1.push(
-                    <View key={i} style={{ alignItems: 'center' }}>
-                        <TouchableOpacity style={{
-                            marginHorizontal: 20,
-                            width: 60,
-                            height: 60,
-                            justifyContent: 'center',
-                            alignItems: 'center',
-                            padding: 10,
-                            borderRadius: 100,
-                            backgroundColor: 'orange',
-                        }}
-                            onPress={() => {
-                                set_ministry_selected(min_name),
-                                    setmessagetoshow(all_messages[min_name])
-
-
-                            }}>
-
-                            <Image style={{ width: 60, height: 60 }}
-                                source={{ uri: icons[i] }}
-                            ></Image>
-                        </TouchableOpacity>
-
-                        <Text style={{ fontSize: 8 }}>{min_name}</Text>
-                    </View>
-                )
-                i += 1
-            })
-            setbtns(btns1)
-
-        }
+    //         console.log(Object.keys(all_messages))
+    //         var i = 0;
+    //         Object.keys(all_messages).forEach((min_name) => {
+    //             btns1.push(
+    //                 <View key={i} style={{ alignItems: 'center' }}>
+    //                     <TouchableOpacity style={{
+    //                         marginHorizontal: 20,
+    //                         width: 60,
+    //                         height: 60,
+    //                         justifyContent: 'center',
+    //                         alignItems: 'center',
+    //                         padding: 10,
+    //                         borderRadius: 100,
+    //                         backgroundColor: 'orange',
+    //                     }}
+    //                         onPress={() => {
+    //                             set_ministry_selected(min_name),
+    //                                 setmessagetoshow(all_messages[min_name])
 
 
-    }, [all_messages]);
+    //                         }}>
+
+    //                         <Image style={{ width: 60, height: 60 }}
+    //                             source={{ uri: icons[i] }}
+    //                         ></Image>
+    //                     </TouchableOpacity>
+
+    //                     <Text style={{ fontSize: 8 }}>{min_name}</Text>
+    //                 </View>
+    //             )
+    //             i += 1
+    //         })
+    //         setbtns(btns1)
+
+    //     }
+
+
+    // }, [all_messages]);
 
 
 

@@ -16,34 +16,34 @@ export default function PrivateNote({ user }) {
     'text': ''
   })
 
-  useEffect(() => {
-    requestPrivateNotes(user[0], user[1]).then((res) => {
-      console.debug(res.data.All_Notes_user)
-      var notes_fetched = []
-      res.data.All_Notes_user.forEach(note => {
-        console.log(note)
-        notes_fetched.push(
-          <Marker
-            key={note['note_id']}
-            coordinate={{ latitude: note['lat'], longitude: note['lon'] }}
-            description={"Note ID : " + note['note_id']}
-            title={note['text']}
-          />
-        )
-      });
-      //console.debug(notes_fetched)
-      setnotes(notes_fetched)
-      setselected(notes_fetched[0])
-      setloading(false)
-    }).catch((err) => {
-      //console.debug(err)
-      setloading(false)
-    })
-    // set note
-  }, []);
+  // useEffect(() => {
+  //   requestPrivateNotes(user[0], user[1]).then((res) => {
+  //     console.debug(res.data.All_Notes_user)
+  //     var notes_fetched = []
+  //     res.data.All_Notes_user.forEach(note => {
+  //       console.log(note)
+  //       notes_fetched.push(
+  //         <Marker
+  //           key={note['note_id']}
+  //           coordinate={{ latitude: note['lat'], longitude: note['lon'] }}
+  //           description={"Note ID : " + note['note_id']}
+  //           title={note['text']}
+  //         />
+  //       )
+  //     });
+  //     //console.debug(notes_fetched)
+  //     setnotes(notes_fetched)
+  //     setselected(notes_fetched[0])
+  //     setloading(false)
+  //   }).catch((err) => {
+  //     //console.debug(err)
+  //     setloading(false)
+  //   })
+  //   // set note
+  // }, []);
 
 
-  //console.debug(notes)
+  // //console.debug(notes)
 
 
   return (

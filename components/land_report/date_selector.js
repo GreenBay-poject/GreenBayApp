@@ -12,37 +12,37 @@ export default function Date_Selector({ dates, setdates, latitude, longitude, da
 
     console.log(date)
     console.log("Dates Length : ", dates.length)
-    useEffect(() => {
+    // useEffect(() => {
 
-        if (dates.length == 0) {
-            console.log("IM HERE")
-            setdate(null)
-            requestavailabledates(latitude, longitude).then((res) => {
-                console.log(res.data.All_Dates_Available)
-                var dates_fetched = []
-                var i = 0
-                res.data.All_Dates_Available.forEach(day => {
-                    dates_fetched.push(
-                        <TouchableOpacity
-                            key={i}
-                            style={styles.datesshow}
-                            onPress={() => { setdate(day) }}
-                        >
-                            <Text style={{ color: BLACK, fontSize: 14 }}>{day}</Text>
-                        </TouchableOpacity>
-                    )
-                    i += 1
-                });
-                setdates(dates_fetched)
+    //     if (dates.length == 0) {
+    //         console.log("IM HERE")
+    //         setdate(null)
+    //         requestavailabledates(latitude, longitude).then((res) => {
+    //             console.log(res.data.All_Dates_Available)
+    //             var dates_fetched = []
+    //             var i = 0
+    //             res.data.All_Dates_Available.forEach(day => {
+    //                 dates_fetched.push(
+    //                     <TouchableOpacity
+    //                         key={i}
+    //                         style={styles.datesshow}
+    //                         onPress={() => { setdate(day) }}
+    //                     >
+    //                         <Text style={{ color: BLACK, fontSize: 14 }}>{day}</Text>
+    //                     </TouchableOpacity>
+    //                 )
+    //                 i += 1
+    //             });
+    //             setdates(dates_fetched)
 
-            }).catch((err) => {
-                console.log(err)
-            })
+    //         }).catch((err) => {
+    //             console.log(err)
+    //         })
 
-        }
+    //     }
 
 
-    }, []);
+    // }, []);
 
     return (
         <View>

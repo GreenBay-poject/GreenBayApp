@@ -8,14 +8,14 @@ import { AntDesign } from '@expo/vector-icons';
 
 export default function DashboardRows({ navigation }) {
   var handleClick = () => {
-    var url = "https://ibb.co/CJGGzy5"
-    Linking.canOpenURL(url).then(supported => {
-      if (supported) {
-        Linking.openURL(url);
-      } else {
-        console.log("Don't know how to open URI: " + url);
-      }
-    });
+    // var url = "https://ibb.co/CJGGzy5"
+    // Linking.canOpenURL(url).then(supported => {
+    //   if (supported) {
+    //     Linking.openURL(url);
+    //   } else {
+    //     console.log("Don't know how to open URI: " + url);
+    //   }
+    // });
   };
   return (
     <>

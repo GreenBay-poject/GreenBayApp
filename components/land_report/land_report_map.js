@@ -10,9 +10,9 @@ import { DARK_GREEN, WHITE } from '../../shared/colors';
 export default function Land_Report_Map({ setdates, latitude, longitude, setlatitude, setlongitude, setstep }) {
 
 
-    useEffect(() => {
+    // useEffect(() => {
 
-    }, []);
+    // }, []);
 
     console.log(latitude)
     console.log(longitude)

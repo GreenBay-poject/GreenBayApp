@@ -11,19 +11,19 @@ export default function MessagePanel({ set_ministry_selected, messagetoshow }) {
     const [qna_elem, set_qna_elem] = useState([])
 
 
-    useEffect(() => {
-        var qna_elem1 = []
-        var i = 0
-        messagetoshow.forEach(element => {
-            i += 1
-            qna_elem1.push(
-                <Bubble key={i} by={element['uname']} ans={element['answer']} title={element['title']} question={element['question']} date={element['dateposted']} />
+    // useEffect(() => {
+    //     var qna_elem1 = []
+    //     var i = 0
+    //     messagetoshow.forEach(element => {
+    //         i += 1
+    //         qna_elem1.push(
+    //             <Bubble key={i} by={element['uname']} ans={element['answer']} title={element['title']} question={element['question']} date={element['dateposted']} />
 
-            )
-        });
-        set_qna_elem(qna_elem1)
+    //         )
+    //     });
+    //     set_qna_elem(qna_elem1)
 
-    }, [messagetoshow]);
+    // }, [messagetoshow]);
 
 
 

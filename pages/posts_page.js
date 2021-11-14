@@ -11,14 +11,14 @@ export default function PostPage({ navigation }) {
     const [user, setuser] = useState(['', '', false])
     const [isauthmode, setisauthmode] = useState(false)
 
-    useEffect(() => {
+    // useEffect(() => {
 
-        get_email_token_auth().then(([email, token, auth]) => {
-            console.log([email, token, auth])
-            const bool_auth = auth == 'true' ? true : false
-            setuser([email, token, bool_auth])
-        });
-    }, []);
+    //     get_email_token_auth().then(([email, token, auth]) => {
+    //         console.log([email, token, auth])
+    //         const bool_auth = auth == 'true' ? true : false
+    //         setuser([email, token, bool_auth])
+    //     });
+    // }, []);
 
     //--one component--
     //Buttons add post  isatuh

@@ -14,58 +14,58 @@ import * as Notifications from 'expo-notifications';
 import firebase from 'firebase';
 import { LogBox } from 'react-native';
 
-const state = {
-  notification: {},
-};
+// const state = {
+//   notification: {},
+// };
 
-Notifications.setNotificationHandler({
-  handleNotification: async () => ({
-    shouldShowAlert: true,
-    shouldPlaySound: false,
-    shouldSetBadge: false,
-  }),
-});
+// Notifications.setNotificationHandler({
+//   handleNotification: async () => ({
+//     shouldShowAlert: true,
+//     shouldPlaySound: false,
+//     shouldSetBadge: false,
+//   }),
+// });
 
-LogBox.ignoreLogs(['Setting a timer']);
-const Stack = createStackNavigator();
+// LogBox.ignoreLogs(['Setting a timer']);
+// const Stack = createStackNavigator();
 
-const RegisterPushNotificationsAsync = async () => {
+// const RegisterPushNotificationsAsync = async () => {
 
 
-  const { status: existingStatus } = Notifications.requestPermissionsAsync()
-  let finalStatus = existingStatus;
+//   const { status: existingStatus } = Notifications.requestPermissionsAsync()
+//   let finalStatus = existingStatus;
 
-  if (existingStatus !== 'granted') {
-    const { status } = await Notifications.requestPermissionsAsync()
-    finalStatus = status;
-  }
+//   if (existingStatus !== 'granted') {
+//     const { status } = await Notifications.requestPermissionsAsync()
+//     finalStatus = status;
+//   }
 
-  if (finalStatus !== 'granted') {
-    return
-  }
-  console.log(finalStatus)
+//   if (finalStatus !== 'granted') {
+//     return
+//   }
+//   console.log(finalStatus)
 
-  let token = (await Notifications.getExpoPushTokenAsync()).data
-  console.log(token)
-  let token_value = token.substring(
-    token.indexOf("[") + 1,
-    token.lastIndexOf("]")
-  );
-  console.log(token_value)
-  writeToken(token_value)
-}
+//   let token = (await Notifications.getExpoPushTokenAsync()).data
+//   console.log(token)
+//   let token_value = token.substring(
+//     token.indexOf("[") + 1,
+//     token.lastIndexOf("]")
+//   );
+//   console.log(token_value)
+//   writeToken(token_value)
+// }
 
-const writeToken = (value) => {
-  firebase.database().ref('Users/' + value).set({
-    value: true
-  }).then((data) => {
-    //success callback
-    console.log('data ', data)
-  }).catch((error) => {
-    //error callback
-    console.log('error ', error)
-  })
-}
+// const writeToken = (value) => {
+//   firebase.database().ref('Users/' + value).set({
+//     value: true
+//   }).then((data) => {
+//     //success callback
+//     console.log('data ', data)
+//   }).catch((error) => {
+//     //error callback
+//     console.log('error ', error)
+//   })
+// }
 
 // const _handleNotification = notification => {
 //   this.setState({ notification: notification });
@@ -103,24 +103,24 @@ export default function App() {
 
 
 
-  useEffect(() => {
+  // useEffect(() => {
 
-    var config = {
-      databaseURL: "https://greenbay-app-default-rtdb.firebaseio.com/",
-      projectId: "greenbay-app",
-    };
-    if (!firebase.apps.length) {
-      firebase.initializeApp(config);
-    }
+  //   var config = {
+  //     databaseURL: "https://greenbay-app-default-rtdb.firebaseio.com/",
+  //     projectId: "greenbay-app",
+  //   };
+  //   if (!firebase.apps.length) {
+  //     firebase.initializeApp(config);
+  //   }
 
-    console.log(firebase.apps.length)
+  //   console.log(firebase.apps.length)
 
-    RegisterPushNotificationsAsync()
+  //   // RegisterPushNotificationsAsync()
 
-    // Notifications.addNotificationReceivedListener(_handleNotification);
+  //   // Notifications.addNotificationReceivedListener(_handleNotification);
 
-    // Notifications.addNotificationResponseReceivedListener(_handleNotificationResponse);
-  }, [])
+  //   // Notifications.addNotificationResponseReceivedListener(_handleNotificationResponse);
+  // }, [])
 
   return (
     <NavigationContainer>

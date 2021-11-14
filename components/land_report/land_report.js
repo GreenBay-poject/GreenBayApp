@@ -20,48 +20,48 @@ export default function Land_Report({ image, setstep }) {
     const image_tag_order = [1, 4, 7, 2, 5, 8, 3, 6, 9]
 
 
-    useEffect(() => {
-        request_land_report(image).then((res) => {
-            console.log(res.data.Report[0])
-            setreport(res.data.Report)
-            var percentages = res.data.Report[0]
-            var sliceColor1 = []
-            var series1 = []
-            var names1 = []
-            var i = 0
-            Object.keys(percentages).forEach(key => {
-                sliceColor1.push(PIE_CHART_COLORS[key])
-                series1.push(percentages[key])
-                names1.push(<Text key={"KXFRF" + i} style={{ color: PIE_CHART_COLORS[key], fontSize: 18 }}>{key} : {percentages[key]} %</Text>)
-                console.log(percentages[key])
-                i += 1
-            });
-            var j = 0
-            var parts1 = []
-            res.data.Report[1].forEach((part) => {
+    // useEffect(() => {
+    //     request_land_report(image).then((res) => {
+    //         console.log(res.data.Report[0])
+    //         setreport(res.data.Report)
+    //         var percentages = res.data.Report[0]
+    //         var sliceColor1 = []
+    //         var series1 = []
+    //         var names1 = []
+    //         var i = 0
+    //         Object.keys(percentages).forEach(key => {
+    //             sliceColor1.push(PIE_CHART_COLORS[key])
+    //             series1.push(percentages[key])
+    //             names1.push(<Text key={"KXFRF" + i} style={{ color: PIE_CHART_COLORS[key], fontSize: 18 }}>{key} : {percentages[key]} %</Text>)
+    //             console.log(percentages[key])
+    //             i += 1
+    //         });
+    //         var j = 0
+    //         var parts1 = []
+    //         res.data.Report[1].forEach((part) => {
 
-                parts1.push(
-                    <>
+    //             parts1.push(
+    //                 <>
 
-                        <Text key={"FECOSFWS" + j}>P{image_tag_order[j]} - {part + ""}</Text>
-                    </>
-                )
-                j += 1
+    //                     <Text key={"FECOSFWS" + j}>P{image_tag_order[j]} - {part + ""}</Text>
+    //                 </>
+    //             )
+    //             j += 1
 
-            })
-            setparts(parts1)
+    //         })
+    //         setparts(parts1)
 
-            setsliceColor(sliceColor1)
-            setseries(series1)
-            setnames(names1)
+    //         setsliceColor(sliceColor1)
+    //         setseries(series1)
+    //         setnames(names1)
 
-            console.log(sliceColor, series, names)
+    //         console.log(sliceColor, series, names)
 
-        }).catch((err) => {
-            console.log(err)
-        })
+    //     }).catch((err) => {
+    //         console.log(err)
+    //     })
 
-    }, []);
+    // }, []);
 
     return (
         <ScrollView>

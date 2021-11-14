@@ -23,59 +23,59 @@ export default function SignInForm({ navigation }) {
 
 
 
-  const signup = () => {
-    setanim(true)
+  // const signup = () => {
+  //   setanim(true)
 
-    if (Name_SUP + ''.length < 2) {
-      ShowAlert('Error !', 'Min. Name Length is 2')
-      setanim(false)
-      return
-    }
-    const re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-    if (!re.test(Email_SUP)) {
-      ShowAlert('Error !', 'Invalid Email Format')
-      setanim(false)
-      return
-    }
-    var int_age = parseInt(Age_SUP + '')
-    const isValidAge = 9 < int_age && int_age < 120
-    console.debug(isValidAge)
-    if (!isValidAge) {
-      ShowAlert('Error !', 'Min. Age is 10 and Max is 120')
-      setanim(false)
-      return
-    }
-    if (Address_SUP + ''.length < 10) {
-      ShowAlert('Error !', 'Min. Address Length is 10')
-      setanim(false)
-      return
-    }
-    if (Postal_SUP + ''.length < 3) {
-      ShowAlert('Error !', 'Min. Postal Length is 3')
-      setanim(false)
-      return
-    }
-    requestSignUp(Name_SUP, Email_SUP, Age_SUP, Address_SUP, Gender_SUP, Postal_SUP)
-      .then((res) => {
-        console.debug(res.data.content);
-        setanim(false);
-        onChangeForm(true);
-        ShowAlert('Success', res.data.content + "\nYour Password sent to email. Please check email and sign in again.");
-      })
-      .catch((err) => {
-        console.debug(err.response.data.Message);
-        ShowAlert('Error !', err.response.data.Message);
-        setanim(false)
-      })
+  //   if (Name_SUP + ''.length < 2) {
+  //     ShowAlert('Error !', 'Min. Name Length is 2')
+  //     setanim(false)
+  //     return
+  //   }
+  //   const re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+  //   if (!re.test(Email_SUP)) {
+  //     ShowAlert('Error !', 'Invalid Email Format')
+  //     setanim(false)
+  //     return
+  //   }
+  //   var int_age = parseInt(Age_SUP + '')
+  //   const isValidAge = 9 < int_age && int_age < 120
+  //   console.debug(isValidAge)
+  //   if (!isValidAge) {
+  //     ShowAlert('Error !', 'Min. Age is 10 and Max is 120')
+  //     setanim(false)
+  //     return
+  //   }
+  //   if (Address_SUP + ''.length < 10) {
+  //     ShowAlert('Error !', 'Min. Address Length is 10')
+  //     setanim(false)
+  //     return
+  //   }
+  //   if (Postal_SUP + ''.length < 3) {
+  //     ShowAlert('Error !', 'Min. Postal Length is 3')
+  //     setanim(false)
+  //     return
+  //   }
+  //   requestSignUp(Name_SUP, Email_SUP, Age_SUP, Address_SUP, Gender_SUP, Postal_SUP)
+  //     .then((res) => {
+  //       console.debug(res.data.content);
+  //       setanim(false);
+  //       onChangeForm(true);
+  //       ShowAlert('Success', res.data.content + "\nYour Password sent to email. Please check email and sign in again.");
+  //     })
+  //     .catch((err) => {
+  //       console.debug(err.response.data.Message);
+  //       ShowAlert('Error !', err.response.data.Message);
+  //       setanim(false)
+  //     })
 
-    // fetch sign in
-    // if failed msg set to failes
-    // ok run fetch user data
-    // save user data in async store
-    // clear stack and go to home
+  // fetch sign in
+  // if failed msg set to failes
+  // ok run fetch user data
+  // save user data in async store
+  // clear stack and go to home
 
 
-  }
+  //}
 
   const signin = () => {
     setanim(true)
